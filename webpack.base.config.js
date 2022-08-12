@@ -1,3 +1,4 @@
+const DotenvWebpackPlugin = require('dotenv-webpack')
 const path = require('path')
 module.exports = {
   context: __dirname,
@@ -28,5 +29,7 @@ module.exports = {
     modules: ['node_modules', 'src'],
     extensions: ['.tsx', '.ts', '.js'],
   },
-  plugins: [],
+  plugins: [
+    new DotenvWebpackPlugin()
+  ],
 }
