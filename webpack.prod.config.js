@@ -7,8 +7,21 @@ module.exports = () => {
   return merge(commonConfig, {
     mode: 'production',
     output: {
-      filename: '[name].js',
-      chunkFilename: '[name].chunk.js',
+      filename: '[name].[contenthash:8].js',
+      chunkFilename: '[name].[contenthash:8].chunk.js',
+    },
+    optimization: {
+      runtimeChunk: true,
+      splitChunks: {
+        minSize: 0,
+        cacheGroups: {
+          defaultVendors: {
+            minSize: 0,
+            minChunks: 3,
+            test: /node_modules/,
+          },
+        },
+      }
     },
     module: {
       rules: [

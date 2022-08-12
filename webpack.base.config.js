@@ -32,4 +32,7 @@ module.exports = {
   plugins: [
     new DotenvWebpackPlugin()
   ],
+  optimization: {
+    splitChunks: { chunks: "all" },
+  },
 }
