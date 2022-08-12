@@ -5,6 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), 'build'),
     publicPath: '/',
+    assetModuleFilename: 'assets/[name][ext]'
   },
   module: {
     rules: [
@@ -16,6 +17,10 @@ module.exports = {
             loader: 'babel-loader',
           },
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
