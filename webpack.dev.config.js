@@ -11,7 +11,13 @@ module.exports = () => {
       filename: '[name].js',
       chunkFilename: '[name].chunk.js',
     },
-    devtool: 'eval-source-map',
+    devtool: 'eval-cheap-module-source-map',
+    optimization: {
+      runtimeChunk: true,
+      removeAvailableModules: false,
+      removeEmptyChunks: false,
+      splitChunks: false,
+    },
     devServer: {
       port: process.env.PORT || 3000,
       open: true,
