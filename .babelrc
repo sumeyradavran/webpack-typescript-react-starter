@@ -2,6 +2,7 @@
   "plugins": [],
   "presets": [
     ["@babel/preset-env", { "modules": false }],
+    ["@babel/preset-react", { "runtime": "automatic" }],
     ["@babel/preset-typescript"]
   ],
   "env": {
@@ -17,9 +18,7 @@
           }
         ]
       ]
-    },
-    "production": {
-      "presets": [["@babel/preset-react", { "runtime": "automatic" }]]
     }
+    
   }
 }

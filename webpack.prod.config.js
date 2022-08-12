@@ -1,6 +1,7 @@
 const { merge } = require('webpack-merge')
 const commonConfig = require('./webpack.base.config')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = () => {
   return merge(commonConfig, {
@@ -10,7 +11,12 @@ module.exports = () => {
       chunkFilename: '[name].chunk.js',
     },
     module: {
-      rules: [],
+      rules: [
+        {
+          test: /\.(css)$/,
+          use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        },
+      ],
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -18,6 +24,7 @@ module.exports = () => {
         filename: './index.html',
         inject: true,
       }),
+      new MiniCssExtractPlugin()
     ],
   })
 }
