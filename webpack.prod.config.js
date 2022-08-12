@@ -1,7 +1,7 @@
 const { merge } = require('webpack-merge')
 const commonConfig = require('./webpack.base.config')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = () => {
   return merge(commonConfig, {
@@ -16,6 +16,10 @@ module.exports = () => {
           test: /\.(css)$/,
           use: [MiniCssExtractPlugin.loader, 'css-loader'],
         },
+        {
+          test: /\.(s(a|c)ss)$/,
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        },
       ],
     },
     plugins: [
@@ -24,7 +28,7 @@ module.exports = () => {
         filename: './index.html',
         inject: true,
       }),
-      new MiniCssExtractPlugin()
+      new MiniCssExtractPlugin(),
     ],
   })
 }

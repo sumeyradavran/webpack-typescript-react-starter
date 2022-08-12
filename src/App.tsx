@@ -1,3 +1,5 @@
+import './App.scss'
+
 export const App = () => {
-    return <div>App</div>
+  return <div className='scss'>App</div>
 }

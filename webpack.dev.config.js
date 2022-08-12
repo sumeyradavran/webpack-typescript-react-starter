@@ -15,12 +15,6 @@ module.exports = () => {
       open: true,
       hot: true,
       historyApiFallback: true,
-      client: {
-        overlay: {
-          errors: true,
-          warnings: false,
-        },
-      },
     },
     module: {
       rules: [
@@ -28,6 +22,11 @@ module.exports = () => {
           test: /\.(css)$/,
           exclude: /node_modules/,
           use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.(s(a|c)ss)$/,
+          exclude: /node_modules/,
+          use: ['style-loader', 'css-loader', 'sass-loader'],
         },
       ],
     },
