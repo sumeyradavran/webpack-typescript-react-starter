@@ -17,7 +17,8 @@
             "cacheCompression": false
           }
         ]
-      ]
+      ],
+      "plugins": ["react-refresh/babel"]
     }
     
   }

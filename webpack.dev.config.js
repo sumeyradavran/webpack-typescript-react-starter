@@ -1,6 +1,7 @@
 const { merge } = require('webpack-merge')
 const commonConfig = require('./webpack.base.config')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
 module.exports = () => {
   return merge(commonConfig, {
@@ -36,6 +37,9 @@ module.exports = () => {
         filename: './index.html',
         inject: true,
       }),
+      new ReactRefreshWebpackPlugin({
+        overlay: false
+      })
     ],
   })
 }
