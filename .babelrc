@@ -1,0 +1,25 @@
+{
+  "plugins": [],
+  "presets": [
+    ["@babel/preset-env", { "modules": false }],
+    ["@babel/preset-typescript"]
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        [
+          "@babel/preset-react",
+          {
+            "runtime": "automatic",
+            "development": true,
+            "cacheDirectory": true,
+            "cacheCompression": false
+          }
+        ]
+      ]
+    },
+    "production": {
+      "presets": [["@babel/preset-react", { "runtime": "automatic" }]]
+    }
+  }
+}
