@@ -4,9 +4,8 @@
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": "src",
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "sourceMap": true,
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "Node",
     "esModuleInterop": true

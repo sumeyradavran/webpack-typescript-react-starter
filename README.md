@@ -8,3 +8,4 @@ This project is a starter for React-Typescript Projects with Webpack 5 in a mini
 * Image support ([Asset Modules](https://webpack.js.org/guides/asset-modules))
 * Css and Sass support
 * Development and Production build
+* Testing with [Jest](https://jestjs.io/) and [react-testing-library](https://testing-library.com/docs/)
