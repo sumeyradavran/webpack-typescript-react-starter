@@ -9,3 +9,4 @@ This project is a starter for React-Typescript Projects with Webpack 5 in a mini
 * Css and Sass support
 * Development and Production build
 * Testing with [Jest](https://jestjs.io/) and [react-testing-library](https://testing-library.com/docs/)
+* [Eslint](https://eslint.org/) and [prettier](https://prettier.io/) config
