@@ -1,9 +1,9 @@
-import {   screen,render } from '@testing-library/react'
+import { screen, render } from '@testing-library/react'
 import { App } from './App'
 
 describe('App component', () => {
-  test("", () => {
+  test('', () => {
     render(<App />)
-    screen.getByAltText("image")
+    screen.getByAltText('image')
   })
 })
